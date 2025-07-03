@@ -62,43 +62,34 @@ pip3 install flask mysql-connector-python
 Directory:
 
 arduino
-Copy
-Edit
+
 product_service/static/images/
 File Naming:
 Use descriptive names, e.g.:
 
-Copy
-Edit
+
 tomato.png
 potato.png
 carrot.png
 MySQL image_path column:
 
 swift
-Copy
-Edit
+
 static/images/tomato.png
 ✅ How to Build & Run
 Local:
 
-bash
-Copy
-Edit
+
 cd product_service
 python3 app.py
 Docker:
 
-bash
-Copy
-Edit
+
 docker build -t product_service .
 docker run -d -p 5002:5002 --network="host" product_service
 Docker Compose:
 
-bash
-Copy
-Edit
+
 docker-compose up --build
 ✅ Endpoints
 /products – All products
@@ -122,9 +113,7 @@ MySQL Connector
 
 ✅ Install Commands (if running locally):
 
-bash
-Copy
-Edit
+
 sudo apt update
 sudo apt install python3 python3-pip
 pip3 install flask mysql-connector-python
