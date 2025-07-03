@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+</head>
+<body>
+    <h2>Confirm Your Order</h2>
+    <ul>
+    {% for item in cart %}
+        <li>{{ item.name }} - ₹{{ item.price }}</li>
+    {% endfor %}
+    </ul>
+    <form method="post">
+        <button type="submit">Place Order</button>
+    </form>
+</body>
+</html>
+

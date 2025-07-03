@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Track Order</title>
+</head>
+<body>
+    <h2>Order Details</h2>
+    {% if order %}
+        Order #: {{ order.id }}<br>
+        Date: {{ order.order_date }}<br>
+        Total: ₹{{ order.total_amount }}
+    {% else %}
+        <p>Order not found.</p>
+    {% endif %}
+</body>
+</html>
+

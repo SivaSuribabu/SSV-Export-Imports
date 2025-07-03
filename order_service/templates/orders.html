@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Orders</title>
+</head>
+<body>
+    <h2>Order History</h2>
+    {% for order in orders %}
+        <div style="border:1px solid gray; padding:10px;">
+            Order #{{ order.id }}<br>
+            Date: {{ order.order_date }}<br>
+            Total: ₹{{ order.total_amount }}<br>
+            <a href="/track_order/{{ order.id }}">Track Order</a>
+        </div>
+    {% endfor %}
+</body>
+</html>
+

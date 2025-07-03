@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  mysql_db:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./mysql:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+
+  auth_service:
+    build: ./auth_service
+    ports:
+      - "5001:5001"
+    depends_on:
+      - mysql_db
+
+  product_service:
+    build: ./product_service
+    ports:
+      - "5002:5002"
+    depends_on:
+      - mysql_db
+
+  order_service:
+    build: ./order_service
+    ports:
+      - "5003:5003"
+    depends_on:
+      - mysql_db
+
+  admin_service:
+    build: ./admin_service
+    ports:
+      - "5004:5004"
+    depends_on:
+      - mysql_db
+

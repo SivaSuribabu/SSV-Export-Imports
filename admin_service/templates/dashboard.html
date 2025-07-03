@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h2>Dashboard</h2>
+    <p>Total Registered Customers: {{ user_count }}</p>
+    <h3>Recent Orders</h3>
+    {% for order in orders %}
+        <div>
+            Order #{{ order.id }} - User ID {{ order.user_id }} - ₹{{ order.total_amount }} - {{ order.order_date }}
+        </div>
+    {% endfor %}
+</body>
+</html>
+
