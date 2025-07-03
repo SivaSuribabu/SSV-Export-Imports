@@ -2,11 +2,8 @@
 🟢 1️⃣ Auth Service
 ✅ Purpose
 Handles:
-
 Customer registration
-
 Login/logout
-
 Session management
 
 ✅ Dependencies
@@ -15,37 +12,26 @@ Flask
 MySQL Connector
 
 ✅ Install Commands (if running locally):
-
-bash
-Copy
-Edit
 sudo apt update
 sudo apt install python3 python3-pip
 pip3 install flask mysql-connector-python
+
 ✅ Ports
 5001
 
 ✅ How to Build & Run
 Local (without Docker):
 
-bash
-Copy
-Edit
+
 cd auth_service
 python3 app.py
 Docker:
 
-bash
-Copy
-Edit
 docker build -t auth_service .
 docker run -d -p 5001:5001 --network="host" auth_service
 Docker Compose:
-
-bash
-Copy
-Edit
 docker-compose up --build
+
 ✅ Endpoints
 /register – Sign up
 
@@ -56,7 +42,6 @@ docker-compose up --build
 🟢 2️⃣ Product Service
 ✅ Purpose
 Show products to customers
-
 Show product detail page
 
 ✅ Dependencies
@@ -66,9 +51,7 @@ MySQL Connector
 
 ✅ Install Commands (if running locally):
 
-bash
-Copy
-Edit
+
 sudo apt update
 sudo apt install python3 python3-pip
 pip3 install flask mysql-connector-python
